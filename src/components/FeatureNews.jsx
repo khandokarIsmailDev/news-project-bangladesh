@@ -5,7 +5,7 @@ import NewsSlider from "./NewsSlider";
 
 async function getData() {
   try {
-    let data = (await (await fetch(`${process.env.BASE_URL}/api/news_list/type?type=feature`,{cache:"no-store"})).json())["data"];
+    let data = (await (await fetch(`https://news-project-bangladesh.vercel.app/api/news_list/type?type=feature`,{cache:"no-store"})).json())["data"];
 
     return data
   } catch (error) {

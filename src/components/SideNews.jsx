@@ -2,7 +2,7 @@ import ShortNews from './ShortNews'
 
 async function getData(newsTypeObj) {
     const { params, value,  } = newsTypeObj;
-    let entertainment = (await (await fetch(`${process.env.BASE_URL}/api/news_list/${params}?${value}`)).json())["data"];
+    let entertainment = (await (await fetch(`https://news-project-bangladesh.vercel.app/api/news_list/${params}?${value}`)).json())["data"];
 
     return entertainment
 }

@@ -7,7 +7,7 @@ import NavMobile from './NavMobile';
 
 async function getData() {
     try {
-        const res = await fetch(`${process.env.BASE_URL}/api/category/categories`);
+        const res = await fetch(`https://news-project-bangladesh.vercel.app/api/category/categories`);
         const data = await res.json()
         if (!data.success) {
             throw new Error("Navlist Fetch failed!")

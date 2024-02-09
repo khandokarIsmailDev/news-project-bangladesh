@@ -3,7 +3,7 @@
 
 async function getData(id) {
     try {
-        const res = await fetch(`${process.env.BASE_URL}/api/comments/news?postID=${id}`,
+        const res = await fetch(`https://news-project-bangladesh.vercel.app/api/comments/news?postID=${id}`,
             { cache: "no-store" }
         );
         const data = await res.json()

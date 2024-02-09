@@ -7,7 +7,7 @@ import SearchForm from './Site Forms/SearchForm';
 
 async function getData(news) {
     try {
-        const res = await fetch(`${process.env.BASE_URL}/api/news_list/${news.endpoint}${news.params}`,
+        const res = await fetch(`https://news-project-bangladesh.vercel.app/api/news_list/${news.endpoint}${news.params}`,
             { cache: "no-store" }
         );
         const data = await res.json()
